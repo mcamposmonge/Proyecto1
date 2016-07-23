@@ -30,7 +30,7 @@ public class Correo {
             transport.sendMessage(message, message.getAllRecipients());
             transport.close();
 
-        } catch (Exception e) {
+        } catch (MessagingException e) {
             e.printStackTrace();
 
         }

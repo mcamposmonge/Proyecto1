@@ -117,7 +117,7 @@ public class Proyecto {
                                     for(int i=0; i <= empleados.size()-1; i++ ){
                                         tempEmplea = empleados.get(i);
                                         if(tempEmplea.getId() == idBusquedaE){
-                                                JOptionPane.showMessageDialog(null,"ID: "+tempEmplea.getId()+"\nNombre: "+tempEmplea.getNombre()+"\nApellido: "+tempEmplea.getApellido()+"\nGenero: "+
+                                                JOptionPane.showMessageDialog(null,"ID: "+tempEmplea.getId()+"\nPlaca: "+tempEmplea.getPlaca()+"\nNombre: "+tempEmplea.getNombre()+"\nApellido: "+tempEmplea.getApellido()+"\nGenero: "+
                                                                             tempEmplea.getGenero()+"\nEdad: "+tempEmplea.getEdad()+"\nTelefono:"+tempEmplea.getTelefono()+"\nEmail: "+
                                                                             tempEmplea.getEmail()+"\nDireccion Fisica: "+tempEmplea.getDireccionFisica()+"\nFecha de Inclusion: "+
                                                                             tempEmplea.getFechaInclusion()+"\nLicencia"+tempEmplea.getLicencia()+"\nTaxi:"+"\nCilindraje: "+tempEmplea.getCilindrajeMotor()+
@@ -196,7 +196,7 @@ public class Proyecto {
                                 for(int i=0; i <= empleados.size()-1; i++ ){
                                     tempEmplea = empleados.get(i);
                                     if(tempEmplea.getId() == idBusqueda){
-                                            JOptionPane.showMessageDialog(null, tempEmplea.AtenderCliente()+" por el empleado "+idBusqueda,"MENSAJE INFORMATIVO", JOptionPane.ERROR_MESSAGE);
+                                            JOptionPane.showMessageDialog(null, tempEmplea.AtenderCliente()+" por el empleado "+idBusqueda,"MENSAJE INFORMATIVO", JOptionPane.INFORMATION_MESSAGE);
                                             valida=true;
                                     }
                                 }
@@ -220,10 +220,11 @@ public class Proyecto {
                                                     int km = Integer.parseInt(JOptionPane.showInputDialog("Digite total de kilometros"));
                                                     int cobroxKM = Integer.parseInt(JOptionPane.showInputDialog("Digite cobro de kilometro"));
                                                     JOptionPane.showMessageDialog(null, tempEmplea.CobrarTarifa(km, cobroxKM)+" para el cliente "+ idBusqueda+" cobrado por empleado "+idBusquedas,"MENSAJE INFORMATIVO", JOptionPane.INFORMATION_MESSAGE);
+                                                    valida = true;
                                                 }
                                             }
                                             if(valida == false){
-                                            JOptionPane.showMessageDialog(null, "El empleado "+idBusquedas+" NO EXISTE","ERROR EN LA BUSQUEDA", JOptionPane.ERROR_MESSAGE);
+                                                JOptionPane.showMessageDialog(null, "El empleado "+idBusquedas+" NO EXISTE","ERROR EN LA BUSQUEDA", JOptionPane.ERROR_MESSAGE);
                                             valida = true;
                                             } 
                                     }
@@ -327,6 +328,7 @@ public class Proyecto {
                                     tempClient = clientes.get(i);
                                     if(tempClient.getId() == idBusqueda){
                                             JOptionPane.showMessageDialog(null, tempClient.SolicitarTaxi()+" para el cliente "+idBusqueda,"MENSAJE INFORMATIVO", JOptionPane.INFORMATION_MESSAGE);
+                                            valida = true;
                                     }
                                 }
                                 if(valida == false){
