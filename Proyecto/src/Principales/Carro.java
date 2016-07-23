@@ -1,7 +1,7 @@
 
 package Principales;
 
-public class Carro { 
+public class Carro {
         
     private int cilindrajeMotor;
     private String tipoFreno;
@@ -106,3 +106,4 @@ public class Carro {
     
     
 }//Fin Carro
+
