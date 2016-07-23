@@ -5,6 +5,7 @@ import javax.mail.*;
 import javax.mail.internet.*;
 
 
+
 public class Correo {
     
     public String EnviarCorreo(Cliente para){
