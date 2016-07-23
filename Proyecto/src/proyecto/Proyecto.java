@@ -191,12 +191,12 @@ public class Proyecto {
                             case 4://Atender Cliente
                                 
                                 valida = false;
-                                idBusqueda = Integer.parseInt(JOptionPane.showInputDialog("Digite su ID"));
+                                idBusqueda = Integer.parseInt(JOptionPane.showInputDialog("Digite el ID del empleado"));
                                 
                                 for(int i=0; i <= empleados.size()-1; i++ ){
                                     tempEmplea = empleados.get(i);
                                     if(tempEmplea.getId() == idBusqueda){
-                                            JOptionPane.showInputDialog(tempEmplea.AtenderCliente()+" por el empleado "+idBusqueda);
+                                            JOptionPane.showMessageDialog(null, tempEmplea.AtenderCliente()+" por el empleado "+idBusqueda,"MENSAJE INFORMATIVO", JOptionPane.ERROR_MESSAGE);
                                             valida=true;
                                     }
                                 }
@@ -213,13 +213,13 @@ public class Proyecto {
                                 for(int i=0; i <= clientes.size()-1; i++ ){
                                     tempClient = clientes.get(i);
                                     if(tempClient.getId() == idBusqueda){
-                                            int idBusquedas = Integer.parseInt(JOptionPane.showInputDialog("Digite su ID"));
+                                            int idBusquedas = Integer.parseInt(JOptionPane.showInputDialog("Digite el ID del empleado"));
                                             for(int j=0; j <= empleados.size()-1; j++ ){
                                                 tempEmplea = empleados.get(j);
                                                 if(tempEmplea.getId() == idBusquedas){
                                                     int km = Integer.parseInt(JOptionPane.showInputDialog("Digite total de kilometros"));
                                                     int cobroxKM = Integer.parseInt(JOptionPane.showInputDialog("Digite cobro de kilometro"));
-                                                    JOptionPane.showInputDialog(tempEmplea.CobrarTarifa(km, cobroxKM)+" para el cliente "+ idBusqueda+" cobrado por empleado "+idBusquedas);
+                                                    JOptionPane.showMessageDialog(null, tempEmplea.CobrarTarifa(km, cobroxKM)+" para el cliente "+ idBusqueda+" cobrado por empleado "+idBusquedas,"MENSAJE INFORMATIVO", JOptionPane.INFORMATION_MESSAGE);
                                                 }
                                             }
                                             if(valida == false){
@@ -321,12 +321,12 @@ public class Proyecto {
                             case 4://Solicitar Taxi
                                 
                                 valida = false;
-                                idBusqueda = Integer.parseInt(JOptionPane.showInputDialog("Digite su ID"));
+                                idBusqueda = Integer.parseInt(JOptionPane.showInputDialog("Digite el ID del cliente"));
                                 
                                 for(int i=0; i <= clientes.size()-1; i++ ){
                                     tempClient = clientes.get(i);
                                     if(tempClient.getId() == idBusqueda){
-                                            JOptionPane.showInputDialog(tempClient.SolicitarTaxi()+" para el cliente "+idBusqueda);
+                                            JOptionPane.showMessageDialog(null, tempClient.SolicitarTaxi()+" para el cliente "+idBusqueda,"MENSAJE INFORMATIVO", JOptionPane.INFORMATION_MESSAGE);
                                     }
                                 }
                                 if(valida == false){
