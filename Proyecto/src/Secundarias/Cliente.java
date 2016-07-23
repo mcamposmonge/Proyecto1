@@ -1,15 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package Secundarias;
+import Principales.Persona;
 
-/**
- *
- * @author manu
- */
-public class Cliente {
+
+public class Cliente extends Persona{
     
-}
+    private String fechaInclusion;
+    
+    public String SolicitarTaxi(){
+                return "El taxi fue solicitado";
+    }
+
+    public String getFechaInclusion() {
+        return fechaInclusion;
+    }
+
+    public void setFechaInclusion(String fechaInclusion) {
+        this.fechaInclusion = fechaInclusion;
+    }
+    
+    public Cliente(int id, String nombre,String apellido, char genero, int edad, String telefono, String email, String direccionFisica,String fechaInclusion){
+        
+            setId(id);
+            setNombre(nombre);
+            setApellido(apellido);
+            setGenero(genero);
+            setEdad(edad);
+            setTelefono(telefono);
+            setEmail(email);
+            setDireccionFisica(direccionFisica);
+            setFechaInclusion(fechaInclusion);
+    
+    }
+    
+}//Fin Cliente
