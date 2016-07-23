@@ -136,7 +136,7 @@ public class Proyecto {
                                     for(int x=0; x <= empleados.size()-1; x++ ){
                                         tempEmplea = empleados.get(x);
                                         if(tempEmplea.getPlaca().equals(idBusquedaEn)){
-                                                JOptionPane.showMessageDialog(null,"ID: "+tempEmplea.getId()+"\nNombre: "+tempEmplea.getNombre()+"\nApellido: "+tempEmplea.getApellido()+"\nGenero: "+
+                                                JOptionPane.showMessageDialog(null,"ID: "+tempEmplea.getId()+"\nPlaca: "+tempEmplea.getPlaca()+"\nNombre: "+tempEmplea.getNombre()+"\nApellido: "+tempEmplea.getApellido()+"\nGenero: "+
                                                                             tempEmplea.getGenero()+"\nEdad: "+tempEmplea.getEdad()+"\nTelefono:"+tempEmplea.getTelefono()+"\nEmail: "+
                                                                             tempEmplea.getEmail()+"\nDireccion Fisica: "+tempEmplea.getDireccionFisica()+"\nFecha de Inclusion: "+
                                                                             tempEmplea.getFechaInclusion()+"\nLicencia"+tempEmplea.getLicencia()+"\nTaxi:"+"\nCilindraje: "+tempEmplea.getCilindrajeMotor()+
