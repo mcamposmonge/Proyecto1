@@ -7,7 +7,6 @@ import java.util.Calendar;
 
 
 public class Proyecto {
-
     
     public static void main(String[] args) {
         boolean opcion = true;
